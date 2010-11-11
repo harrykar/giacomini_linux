@@ -151,7 +151,14 @@
  <Q>&lt;i&gt;Forma generale:&lt;/i&gt;
  
  &lt;b&gt;&lt;font color="red"&gt;cp&lt;/font&gt; [opzioni] origine ... destinazione&lt;/b&gt;</Q>
- <A>Copia uno o più file (incluse le directory) in un’unica destinazione</A>
+ <A>Copia uno o più file (incluse le directory) in un’unica destinazione
+  &lt;ul&gt;
+	 &lt;li&gt;Se "origine" e "destinazione" sono i nomi di due file normali(regular files), il primo viene copiato sul secondo, viene cioè generata una copia del file "origine" che ha il nome indicato come file "destinazione"&lt;/li&gt;
+	 &lt;li&gt;Se i file "origine" sono dei collegamenti simbolici per default  la copia è ottenuta a partire dai file originali(questi vengono copiati così come se fossero file normali) e non si ottiene quindi una copia dei collegamenti&lt;/li&gt;
+	 &lt;li&gt;Se "destinazione" è una directory, il file "origine" viene copiato nella directory con lo stesso nome&lt;/li&gt;
+	 &lt;li&gt;Se vengono indicati più file "origine"(quando p.e. si utilizzano i caratteri jolly), la "destinazione" &lt;b&gt;deve&lt;/b&gt; essere una directory, all’interno della quale vengono generate le copie di tutti i file "origine" indicati&lt;/li&gt;
+	 &lt;li&gt;Per default(senza le opzioni -r o -R) le directory non vengono copiate.&lt;/li&gt;	 
+  &lt;/ul&gt;</A>
 </item>
 <item id="_12.inv">
  <cat>Linux: ABC dei comandi</cat>
@@ -159,6 +166,17 @@
  
  Copia uno o più file (incluse le directory) in un’unica destinazione</Q>
  <A> &lt;b&gt;&lt;font color="red"&gt;cp&lt;/font&gt; [opzioni] origine ... destinazione&lt;/b&gt;</A> 
+</item>
+<item id="_">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;cp:&lt;/font&gt; Unix Vs Dos&lt;/b&gt;</Q>
+ <A> 
+   &lt;ul&gt;
+	 &lt;li&gt;In Unix i &lt;i&gt;caratteri jolly&lt;/i&gt; (ovvero il &lt;i&gt;file globbing&lt;/i&gt;) vengono risolti dalla shell prima dell’esecuzione del comando&lt;/li&gt;
+	 &lt;li&gt;i file system Unix possono utilizzare i collegamenti simbolici&lt;/li&gt;
+	 &lt;li&gt;In Dos il comando ‘COPY’ consente di copiare un gruppo di file in un altro gruppo di file con i nomi leggermente modificati, come per esempio: ‘COPY *.bak *.doc’. Con i sistemi Unix, questo non si puà fare&lt;/li&gt;
+   &lt;/ul&gt;
+ </A>
 </item>
 <item id="_13">
  <cat>Linux: ABC dei comandi</cat>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mnemosyne core_version="1" >
 
+
+
 &lt;! Capitolo 20 &gt;
-<category active="1">
- <name>ABC dei comandi Unix</name>
-</category>
 
 
 &lt;! ls &gt;
@@ -423,5 +422,542 @@
  <cat>Linux: ABC dei comandi</cat>
  <Q>Genera il file ‘prova2’ come risultato del concatenamento in sequenza di ‘prova’ e ‘prova1’</Q>
  <A>$ &lt;font color="red"&gt;cat&lt;/font&gt; prova prova1 > prova2  &lt;i&gt;[ Invio ]&lt;/i&gt;</A>
-</item>     
+</item>
+
+
+
+&lt;! Capitolo 21 &gt;
+
+&lt;! miniGlossario &gt;
+<item id="_32">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;boot&lt;/font&gt;&lt;/b&gt; </Q>
+ <A>La fase di avvio(caricamento) del sistema operativo</A>
+</item>
+<item id="_32.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>La fase di avvio(caricamento) del sistema operativo si chiama ...</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;boot&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_33">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;bootstrap&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>La porzione di codice che si occupa effettivamente di attuare l’avvio è il &lt;i&gt;bootstrap&lt;/i&gt; (calzastivale). Pertanto, in senso figurato, il caricamento del sistema operativo viene paragonato all’atto di calzare uno stivale</A>
+</item>
+<item id="_33.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>La porzione di codice che si occupa effettivamente di attuare l’avvio è il ... Pertanto, in senso figurato, il caricamento del sistema operativo viene paragonato all’atto di calzare uno stivale</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;bootstrap&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_34">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;monoprogrammazione&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Un sistema operativo è &lt;i&gt;monoprogrammato&lt;/i&gt; quando consente la gestione di un solo processo elaborativo per volta; ovvero, quando la memoria centrale può contenere il codice di un solo programma per volta.</A>
+</item>
+<item id="_34.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Quando un sistema operativo consente la gestione di un solo processo elaborativo per volta; ovvero, quando la memoria centrale può contenere il codice di un solo programma per volta si chiama ...</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;monoprogrammazione&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_35">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;multiprogrammazione&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Un sistema è invece &lt;i&gt;multiprogrammato&lt;/i&gt; quando è in grado di assegnare a più processi elaborativi porzioni di memoria separate, eseguendoli in modo apparentemente simultaneo, &lt;i&gt; suddividendo il tempo di utilizzo della CPU (timesharing)&lt;/i&gt;</A>
+</item>
+<item id="_35.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Quando un sistema operativo è in grado di assegnare a più processi elaborativi porzioni di memoria separate, eseguendoli in modo apparentemente simultaneo, suddividendo il tempo di utilizzo della CPU si chiama ...</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;multiprogrammazione&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_36">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;time sharing,time slice &lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Quando una risorsa viene condivisa da più processi elaborativi attraverso la suddivisione del tempo di utilizzo in «fettine»(slices), si definisce che il suo utilizzo avviene in modo &lt;i&gt;time sharing&lt;/i&gt;, dove le porzioni di tempo assegnate sono note come &lt;i&gt;time slice&lt;/i&gt;</A>
+</item>
+<item id="_36.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Quando una risorsa viene condivisa da più processi elaborativi attraverso la suddivisione del tempo di utilizzo in «fettine»(slices), si definisce che il suo utilizzo avviene in modo ..., dove le porzioni di tempo assegnate sono note come ...</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;time sharing,time slice &lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_37">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Account&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>All’interno di un sistema operativo Unix, si ha un account quando si è stati registrati (e di conseguenza è stato ottenuto un &lt;i&gt;UID&lt;/i&gt;) ed è possibile accedere attraverso &lt;i&gt;la procedura di accesso&lt;/i&gt;</A>
+</item>
+<item id="_37.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>All’interno di un sistema operativo Unix, si ha un ... quando si è stati registrati (e di conseguenza è stato ottenuto un &lt;i&gt;UID&lt;/i&gt;) ed è possibile accedere attraverso &lt;i&gt;la procedura di accesso&lt;/i&gt;</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Account&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_38">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;GID, UID&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>&lt;i&gt;Group identifier, Group ID&lt;/i&gt; o numero identificativo del gruppo di utenti. Invece UID User identifier è il numero identificativo dell’utente</A>
+</item>
+<item id="_38.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... è il numero identificativo del gruppo di utenti. Invece ... è il numero identificativo dell’utente</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;GID, UID&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_39">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Login(procedura di accesso), logout&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>
+   &lt;ol&gt;
+	 &lt;li&gt;Con &lt;i&gt;procedura di accesso(login)&lt;/i&gt; si riferisce al procedimento attraverso il quale un utente accede e può interagire con il sistema, dopo una fase di identificazione, che di solito consiste nell’indicazione di un &lt;i&gt;nominativo-utente(username)&lt;/i&gt; e di una &lt;i&gt;parola d’ordine(password)&lt;/i&gt;.In particolare login identifica l’ingresso dell’utente, nel sistema&lt;/li&gt;
+	 &lt;li&gt;Il &lt;i&gt;logout&lt;/i&gt; identifica la conclusione dell’attività dell' utente nel sistema.&lt;/li&gt;
+   &lt;/ol&gt;</A>
+</item>
+<item id="_39.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;ol&gt;
+	 &lt;li&gt;Con ... si riferisce al procedimento attraverso il quale un utente accede e può interagire con il sistema, dopo una fase di identificazione, che di solito consiste nell’indicazione di un &lt;i&gt;nominativo-utente(username)&lt;/i&gt; e di una &lt;i&gt;parola d’ordine(password)&lt;/i&gt;.In particolare login identifica l’ingresso dell’utente, nel sistema&lt;/li&gt;
+	 &lt;li&gt;Il ... identifica la conclusione dell’attività dell' utente nel sistema.&lt;/li&gt;
+   &lt;/ol&gt;</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Login(procedura di accesso), logout&lt;/font&gt;&lt;/b&gt;</A>
+</item>          
+<item id="_40">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Password, passphrase, parola d’ordine&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Si riferisce a una parola o a una frase utilizzata come &lt;i&gt;mezzo di verifica dell’identificazione&lt;/i&gt; per poter accedere a un servizio di qualunque genere.
+ 
+ A volte password e passfrase differiscono dal fatto che nella password si utilizzano solo dei caratteri alfanumerici mentre nella passfrase in più si usano anche dei caratteri speciali</A>
+</item>
+<item id="_40.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... si riferisce a una parola o a una frase utilizzata come &lt;i&gt;mezzo di verifica dell’identificazione&lt;/i&gt; per poter accedere a un servizio di qualunque genere</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Password, passphrase, parola d’ordine&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_41">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Second-extended, Ext2, Ext3, Ext4&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il file system nativo del sistema GNU/Linux è il tipo Second-extended, il quale prevede delle varianti: Ext2, Ext3 e Ext4. Le varianti Ext3 e Ext4 contengono delle estensioni che consentono di ridurre la possibilità di perdite di dati, mantenendo la compatibilità con Ext2; Eccetto Ext4 che è solo parzialmente compatibile</A>
+</item>
+<item id="_41.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il file system nativo del sistema GNU/Linux è il tipo ..., il quale prevede delle varianti: ..., ... e .... Le varianti ... e ...contengono delle estensioni che consentono di ridurre la possibilità di perdite di dati, mantenendo la compatibilità con ...; Eccetto ... che è solo parzialmente compatibile</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Second-extended, Ext2, Ext3, Ext4&lt;/font&gt;&lt;/b&gt;
+ 
+ Il file system nativo del sistema GNU/Linux è il tipo &lt;font color="red"&gt;Second-extended&lt;/font&gt;, il quale prevede delle varianti: &lt;font color="red"&gt;Ext2, Ext3&lt;/font&gt; e &lt;font color="red"&gt;Ext4&lt;/font&gt;. Le varianti &lt;font color="red"&gt;Ext3&lt;/font&gt; e &lt;font color="red"&gt;Ext4&lt;/font&gt; contengono delle estensioni che consentono di ridurre la possibilità di perdite di dati, mantenendo la compatibilità con &lt;font color="red"&gt;Ext2&lt;/font&gt;; Eccetto &lt;font color="red"&gt;Ext4&lt;/font&gt; che è solo parzialmente compatibile</A>
+</item>
+<item id="_42">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;FAT&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>&lt;i&gt;File allocation table&lt;/i&gt;. La FAT è una parte componente del file system dei sistemi Dos. È così particolare che tale tipo di file system viene chiamato con questa stessa sigla: FAT.</A>
+</item>
+<item id="_42.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>La ... è una parte componente del file system dei sistemi Dos. È così particolare che tale tipo di file system viene chiamato con questa stessa sigla: ....</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;FAT&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_43">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Glob, globbing, caratteri jolly, metacaratteri&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Quando si vuole identificare un gruppo di file (e directory) attraverso una sola definizione si utilizza &lt;i&gt;il meccanismo del glob&lt;/i&gt;, corrispondente in ambiente Dos all’uso dei &lt;i&gt;caratteri jolly&lt;/i&gt;. Si tratta di solito dell’ *, ? e []</A>
+</item>
+<item id="_43.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Quando si vuole identificare un gruppo di file (e directory) attraverso una sola definizione si utilizza &lt;i&gt;il meccanismo del ...&lt;/i&gt;</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Glob, globbing, caratteri jolly, metacaratteri&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_44">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale
+ 
+ &lt;b&gt;NB:&lt;/b&gt; Nei sistemi operativi Unix, quando si vuole accedere ai dati memorizzati su disco, non si può fare riferimento a un file appartenente a una certa unità disco(C:/ ,D:/ ecc.)come avviene nei sistemi Dos e derivati. Si deve sempre fare riferimento al file system globale("/")</A>
+</item>
+<item id="_44.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il termine ... indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine ... indica il distacco di un disco dalla struttura globale</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_45">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale
+ 
+ &lt;b&gt;NB:&lt;/b&gt; Nei sistemi operativi Unix, quando si vuole accedere ai dati memorizzati su disco, non si può fare riferimento a un file appartenente a una certa unità disco(C:/ ,D:/ ecc.)come avviene nei sistemi Dos e derivati. Si deve sempre fare riferimento al file system globale("/").
+ </A>
+</item>
+<item id="_45.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il termine ... indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine ... indica il distacco di un disco dalla struttura globale</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;
+ 
+ Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale</A>
+</item>
+<item id="_46">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Newline, interruzione di riga&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>E il codice necessario per indicare la fine di una riga di testo e l’inizio di quella successiva. Utilizzando questo nome(Newline) si dovrebbe evitare di fare riferimento direttamente al codice effettivo in modo che il concetto possa essere adatto a diversi sistemi.
+   &lt;ul&gt;
+	 &lt;li&gt;I sistemi Unix più comuni utilizzano il codice "LF" &lt;/li&gt;
+	 &lt;li&gt;Nei sistemi Dos e discendenti si utilizza invece la coppia "CR""LF", per cui, se si tenta di stampare un testo fatto per i sistemi Unix utilizzando una stampante configurata per operare con il sistema operativo Dos, come risultato si possono ottenere una serie di righe scalettate&lt;/li&gt;
+	 &lt;li&gt;raramente una stampante del genere può essere configurata per andare a capo con il solo codice "LF", è possibile utilizzare un filtro che trasformi il carattere "LF" in "CR""LF". Spesso, per un programma che svolge un compito come questo si usa il nome ‘unix2dos’.&lt;/li&gt;
+   &lt;ul&gt;
+ </A>
+</item>
+<item id="_46.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... è il codice necessario per indicare la fine di una riga di testo e l’inizio di quella successiva. Utilizzando il nome ... si dovrebbe evitare di fare riferimento direttamente al codice effettivo in modo che il concetto possa essere adatto a diversi sistemi.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Newline, interruzione di riga&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_47">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Record&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il record è in generale una registrazione di qualunque tipo. Corrisponde di solito a una riga di un file di dati. E' normalmente suddiviso in campi(field), per cui si può fare un’analogia con un archivio a schede: l’archivio è il file, le schede sono i record e i campi sono i vari elementi indicati nelle schede</A>
+</item>
+<item id="_47.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il ... è in generale una registrazione di qualunque tipo. Corrisponde di solito a una riga di un file di dati. E' normalmente suddiviso in campi(field), per cui si può fare un’analogia con un archivio a schede: l’archivio è il file, le schede sono i ... e i campi sono i vari elementi indicati nelle schede</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Record&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_48">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Regular file (file normale)&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Nei sistemi operativi della famiglia Unix, quando si parla di file, si intendono anche le directory oltre che altri oggetti con funzioni particolari. Per specificare che si parla di un file puro e semplice,  &lt;u&gt;comprendendo in questa categoria anche gli eseguibili&lt;/u&gt;, si parla di &lt;i&gt;regular file&lt;/i&gt; o di &lt;i&gt;file normale&lt;/i&gt;</A>
+</item>
+<item id="_48.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Nei sistemi operativi della famiglia Unix, quando si parla di file, si intendono anche le directory oltre che altri oggetti con funzioni particolari. Per specificare che si parla di un file puro e semplice, &lt;u&gt;comprendendo in questa categoria anche gli eseguibili&lt;/u&gt;, si parla di ... </Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Regular file (file normale)&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_49">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Client (Cliente)&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Un «cliente» è generalmente un programma che usufruisce di un servizio offerto da un «servente». Tuttavia, spesso si usa questo termine, in modo informale, anche per identificare un nodo di rete che, nell’ambito di un certo contesto, dipende da servizi offerti dall’esterno</A>
+</item>
+<item id="_49.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Un ... è generalmente un programma che usufruisce di un servizio offerto da un «servente». Tuttavia, spesso si usa questo termine, in modo informale, anche per identificare un nodo di rete che, nell’ambito di un certo contesto, dipende da servizi offerti dall’esterno</Q>
+ <A> &lt;b&gt;&lt;font color="red"&gt;Client (Cliente)&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_50">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Dominio, nome di dominio, nome a dominio, Domain name&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Col termine «dominio» (Nella terminologia giuridica italiana si usa la definizione «nome a dominio») si riferisce al nome che ha un certo nodo di rete in una rete Internet. 
+ 
+ Questo nome &lt;u&gt;è composto da vari elementi che servono a rappresentare una gerarchia di domini&lt;/u&gt;, in modo simile a ciò che si fa nei file system con la struttura delle directory. 
+ 
+ Un «nome di dominio» può rappresentare una posizione intermedia di questa gerarchia, oppure anche il nome completo di un nodo di rete</A>
+</item>
+<item id="_50.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Col termine ... (Nella terminologia giuridica italiana si usa la definizione ...) si riferisce al nome che ha un certo nodo di rete in una rete Internet. </Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Dominio, nome di dominio, nome a dominio, Domain name&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_51">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Host&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>&lt;i&gt;Host&lt;/i&gt; è l’oste, ovvero, colui che ospita. Il termine host viene usato nell’ambito delle connessioni in rete per definire i nodi di rete, intesi come elaboratori, che svolgono e ospitano qualche tipo di servizio</A>
+</item>
+<item id="_51.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>il termine ... viene usato nell’ambito delle connessioni in rete per definire i nodi di rete, intesi come elaboratori, che svolgono e ospitano qualche tipo di servizio.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Host&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_52">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Nodo di rete&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il &lt;i&gt;nodo di rete&lt;/i&gt; è un elaboratore o un altro componente specializzato che è inserito in una rete e ha un indirizzo valido nella stessa (indirizzo riferito al livello 3, secondo il modello ISO-OSI)</A>
+</item>
+<item id="_52.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il ... è un elaboratore o un altro componente specializzato che è inserito in una rete e ha un indirizzo valido nella stessa (indirizzo riferito al livello 3, secondo il modello ISO-OSI)</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Nodo di rete&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_53">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Protocollo&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il protocollo è un linguaggio convenzionale di comunicazione tra programmi (per esempio, un programma cliente comunica con un servente attraverso un determinato protocollo)</A>
+</item>
+<item id="_53.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il ... è un linguaggio convenzionale di comunicazione tra programmi (per esempio, un programma cliente comunica con un servente attraverso un determinato protocollo)</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Protocollo&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_54">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Proxy&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il termine proxy viene usato in informatica in varie circostanze per identificare un servizio che si comporta in qualche modo come un procuratore, o un procacciatore di qualcosa</A>
+</item>
+<item id="_54.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il termine ... viene usato in informatica in varie circostanze per identificare un servizio che si comporta in qualche modo come un procuratore, o un procacciatore di qualcosa</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Proxy&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_55">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Esempio di &lt;b&gt;&lt;font color="red"&gt; Proxy&lt;/font&gt;&lt;/b&gt;</Q>
+ <A> Il servente che si inserisce tra una rete locale e una rete esterna, allo scopo di eseguire gli accessi verso la rete esterna per conto dei nodi della rete locale, senza che questi possano avere alcun contatto diretto con l’esterno. Di solito, questo tipo di proxy incorpora una memoria cache per ridurre gli accessi ripetuti alle stesse risorse esterne</A>
+</item>
+<item id="_56">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;TCP/IP&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>TCP/IP rappresenta il famoso insieme dei protocolli usati per le reti conformi agli standard di Internet</A>
+</item>
+<item id="_56.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>TCP/IP rappresenta il famoso insieme dei protocolli usati per le reti conformi agli standard di Internet</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;TCP/IP&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_57">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;URI, URL, URN&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>&lt;font color="red"&gt;Uniform resource locator, Uniform resource identifier&lt;/font&gt;. È il modo con cui si definisce un indirizzo che identifica precisamente una risorsa di rete (come una pagina HTML, un file in un servizio FTP ecc). Le due definizioni hanno estensioni differenti; in particolare, URI include URL e URN</A>
+</item>
+<item id="_57.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>È il modo con cui si definisce un indirizzo che identifica precisamente una risorsa di rete. ... include ... e ...</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;URI, URL, URN&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_58">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Init, procedura di inizializzazione del sistema&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Init è il primo processo(programma in esecuzione) che viene avviato dal kernel allo scopo di avviare il sistema. 
+ 
+ Init si avvale di una serie di script per avviare dei programmi che rimangono sullo sfondo(in background). Tutto l’insieme viene indicato come procedura di inizializzazione del sistema, &lt;u&gt;includendo sia l’avvio, sia l’arresto&lt;/u&gt;, distinguendo anche diversi livelli di esecuzione</A>
+</item>
+<item id="_58.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... è il primo processo(programma in esecuzione) che viene avviato dal kernel allo scopo di avviare il sistema.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Init, procedura di inizializzazione del sistema&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_59">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Job&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il termine job viene usato spesso nella documentazione Unix in riferimento a compiti di vario tipo, a seconda del contesto.
+ Job di shell
+ Job di stampa
+ Job di scheduling</A>
+</item>
+<item id="_59.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il termine ... viene usato spesso nella documentazione Unix in riferimento a compiti di vario tipo
+ ... di shell
+ ... di stampa
+ ... di scheduling</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Job&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_60">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Log, registrazioni&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il log è un sistema automatico di registrazione di avvenimenti significativi. I file che contengono queste annotazioni sono detti &lt;i&gt;file di log o file delle registrazioni&lt;/i&gt;. 
+
+ In generale, il log è un registro e le annotazioni che vi si fanno sono delle registrazioni.</A>
+</item>
+<item id="_60.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il ... è un sistema automatico di registrazione di avvenimenti significativi. I file che contengono queste annotazioni sono detti &lt;i&gt;file di ... o file delle ...&lt;/i&gt;.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Log, registrazioni&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_61">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;PID&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>&lt;font color="red"&gt;Process identifier&lt;/font&gt;, &lt;font color="red"&gt;Process ID&lt;/font&gt; o numero identificativo del processo</A>
+</item>
+<item id="_62">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Pipe, pipeline, condotto&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>E' una tubazione immaginaria attraverso la quale si convoglia l’output di un programma verso l’input di un altro. La connessione di più programmi in questo modo è compito della shell e di solito si utilizza il simbolo ‘|’ per indicare questa operazione. Il simbolo ‘|’ viene anche chiamato &lt;font color="red"&gt;pipe&lt;/font&gt;.
+</A>
+</item>
+<item id="_62.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>La connessione di più programmi è compito della shell e di solito si utilizza il simbolo ‘|’ per indicare l' operazione di ....</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Pipe, pipeline, condotto&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_63">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Run level, livello di esecuzione&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Quando si adotta una procedura di inizializzazione del sistema in stile &lt;i&gt;System V&lt;/i&gt;, che è poi quella normale, si distinguono diversi &lt;font color="red"&gt;livelli di esecuzione&lt;/font&gt;, in modo da poter definire quali parti del sistema devono essere attivate e quali no, a seconda delle esigenze. Il livello di esecuzione è un numero non negativo che parte da zero, il cui significato dipende dal modo in cui il sistema è configurato.
+</A>
+</item>
+<item id="_63.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Quando si adotta una procedura di inizializzazione del sistema in stile &lt;i&gt;System V&lt;/i&gt;, che è poi quella normale, si distinguono diversi ..., in modo da poter definire quali parti del sistema devono essere attivate e quali no, a seconda delle esigenze</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Run level, livello di esecuzione&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_64">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Run level 0&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Run level riservato per la fase di preparazione allo spegnimento</A>
+</item>
+<item id="_65">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Run level 6&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Run level riservato alla fase di preparazione al riavvio del sistema</A>
+</item>
+<item id="_66">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Run level 1&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Run level riservato al funzionamento monoutente</A>
+</item>
+<item id="_67">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;script&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Uno script è un file di comandi che costituisce in pratica un programma interpretato. Normalmente, l’interprete di uno script è anche una shell</A>
+</item>
+<item id="_67.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Uno ... è un file di comandi che costituisce in pratica un programma interpretato. Normalmente, l’interprete di uno script è anche una shell</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;script&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_68">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;shell&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>La shell di un sistema operativo è quel programma che si occupa di interpretare ed eseguire i comandi dati dall’utente, attraverso una riga di comando. Il termine shell, utilizzato per questo scopo, nasce proprio dai sistemi operativi Unix</A>
+</item>
+<item id="_68.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>La ... di un sistema operativo è quel programma che si occupa di interpretare ed eseguire i comandi dati dall’utente, attraverso una riga di comando.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;shell&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_69">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Standard error&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il file o il dispositivo predefinito per l’emissione dei dati relativi a segnalazioni di errore.Di solito si tratta del video della console o del terminale da cui si opera. Di norma, può essere ridiretto utilizzando il simbolo ‘2>’ seguito dal nome del file o del dispositivo da utilizzare.</A>
+</item>
+<item id="_69.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... è Il file o il dispositivo predefinito per l’emissione dei dati relativi a segnalazioni di errore.Di solito si tratta del video della console o del terminale da cui si opera. Di norma, può essere ridiretto utilizzando il simbolo ‘2>’ seguito dal nome del file o del dispositivo da utilizzare.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Standard error&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_70">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Standard input&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il file o il dispositivo predefinito per l’inserimento dei dati, è lo standard input. Di solito è la tastiera della console o del terminale da cui si opera. Per terminare l’inserimento occorre fornire il carattere di fine file ("EOF" cioè ^d) che di solito si ottiene con la combinazione [ Ctrl d ]. 
+ 
+ Lo standard input, di norma, può essere ridiretto con il simbolo minore (&lt;) seguito dal nome del file o del dispositivo da utilizzare, oppure con la barra verticale (‘|’ pipe) quando si vuole utilizzare l’output di un comando come input per il comando successivo</A>
+</item>
+<item id="_70.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... è Il file o il dispositivo predefinito per l’inserimento dei dati, è lo standard input. Di solito è la tastiera della console o del terminale da cui si opera. Per terminare l’inserimento occorre fornire il carattere di fine file ("EOF" cioè ^d) che di solito si ottiene con la combinazione [ Ctrl d ].</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Standard input&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_71">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Standard output&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il file o il dispositivo predefinito per l’uscita dei dati, è lo standard output. Di solito è il video della console o del terminale da cui si opera. Lo standard output può essere ridiretto utilizzando il simbolo maggiore (‘>’) seguito dal nome del file o del dispositivo da utilizzare, oppure può essere diretto a un comando seguente attraverso il pipe (‘|’).</A>
+</item>
+<item id="_71.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... Il file o il dispositivo predefinito per l’uscita dei dati, è lo standard output.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Standard output&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_72">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Unix domain socket (socket di dominio Unix)&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Si tratta di un sistema di comunicazione tra le applicazioni basato su un tipo di &lt;i&gt;file speciale&lt;/i&gt;: &lt;font color="red"&gt; il socket&lt;/font&gt;. Alcuni demoni offrono servizi attraverso questo tipo di comunicazione stando in ascolto in attesa di una richiesta di connessione da parte delle applicazioni clienti</A>
+</item>
+<item id="_72.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>... è Il file o il dispositivo predefinito per l’uscita dei dati, è lo standard output.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Standard output&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_73">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Utility, utilità, programma di utilità, programma di servizio&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Un’&lt;i&gt; utility&lt;/i&gt;, ovvero un programma di utilità, o meglio un programma di servizio, è un programma utile e pratico che svolge il suo compito senza tanti fronzoli e senza essere troppo appariscente. Di solito, i programmi di questo tipo sono quelli che fanno parte integrante del sistema operativo.
+</A>
+</item>
+<item id="_73.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Un’..., ovvero un programma di utilità, o meglio un programma di servizio, è un programma utile e pratico che svolge il suo compito senza tanti fronzoli e senza essere troppo appariscente.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Utility, utilità, programma di utilità, programma di servizio&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_74">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Case sensitive, case insensitive&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Con queste due definizioni si intende riferirsi rispettivamente alla «sensibilità» o meno verso la differenza tra le lettere maiuscole e minuscole. 
+ 
+ Generalmente, i sistemi Unix sono sensibili a questa differenza, nel senso che distinguono i nomi anche in base alla combinazione di lettere maiuscole e minuscole, ma esistono circostanze in cui questa distinzione non c’è o si vuole ignorare.</A>
+</item>
+<item id="_74.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Con ... e ... si intende riferirsi rispettivamente alla «sensibilità» o meno verso la differenza tra le lettere maiuscole e minuscole</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Case sensitive, case insensitive&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_75">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Core&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Negli ambienti Unix, &lt;font color="red"&gt;core è sinonimo di memoria centrale, o RAM&lt;/font&gt;. 
+ 
+  Deriva dal fatto che gli elaboratori usati inizialmente con il sistema UNIX erano dotati di memoria RAM realizzata attraverso un reticolo di nuclei ferromagnetici: la memoria a nuclei(core). 
+  
+  Per questo spesso, quando un processo termina in modo anormale, il sistema operativo scarica in un file l’immagine che questo processo ha in memoria. Questo file ha il nome ‘core’ e può essere analizzato successivamente attraverso strumenti diagnostici opportuni.</A>
+</item>
+<item id="_75.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Negli ambienti Unix, &lt;font color="red"&gt;... è sinonimo di memoria centrale, o RAM&lt;/font&gt;. 
+ 
+ Per questo spesso, quando un processo termina in modo anormale, il sistema operativo scarica in un file l’immagine che questo processo ha in memoria. Questo file ha il nome ... e può essere analizzato successivamente attraverso strumenti diagnostici opportuni.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Core&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_76">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Daemon (demone)&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il daemon, o demone, è un programma (Per tradizione, la maggior parte dei programmi demone ha un nome che termina con la lettera «d») che funziona sullo sfondo (in background) e compie dei servizi in modo ripetitivo, come in un circolo vizioso. Questo termine è tipico degli ambienti Unix, mentre con altri sistemi operativi si utilizzano altre definizioni, per esempio servente(server).
+</A>
+</item>
+<item id="_76.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>Il ... è un programma (Per tradizione, la maggior parte dei programmi ... ha un nome che termina con la lettera «d») che funziona sullo sfondo (in background) e compie dei servizi in modo ripetitivo, come in un circolo vizioso.&lt;/font&gt;</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Daemon (demone)&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_77">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Espressione regolare, regular expression, regexp&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>E' un modello per la ricerca di stringhe. Viene usata da diversi programmi di servizio</A>
+</item>
+<item id="_77.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>>... è un modello per la ricerca di stringhe. Viene usata da diversi programmi di servizio</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Espressione regolare, regular expression, regexp&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_78">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Implementation (realizzazione)&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Il verbo inglese "to implement" rappresenta il modo con cui una caratteristica progettuale particolare viene definita in pratica in un sistema determinato. In altre parole, si tratta della soluzione pratica adottata per assolvere a una funzione determinata, soprattutto quando le indicazioni originarie per raggiungere il risultato sono incomplete. In forma ancora più stringata, si tratta della realizzazione di qualcosa in un contesto determinato.
+</A>
+</item>
+<item id="_78.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>>... rappresenta il modo con cui una caratteristica progettuale particolare viene definita in pratica in un sistema determinato.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Implementation (realizzazione)&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_79">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Internazionalizzazione, i18n&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>L’internazionalizzazione è l’azione con cui si realizza o si modifica un programma, in modo che sia sensibile alla «localizzazione». La sigla deriva dal fatto che tra la lettera «i» e la lettera «n» di internationalization ci sono 18 lettere</A>
+</item>
+<item id="_79.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>>L’ ...è l’azione con cui si realizza o si modifica un programma, in modo che sia sensibile alla «localizzazione»</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Internazionalizzazione, i18n&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_80">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Localizzazione, l10n&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>La localizzazione è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali. La sigla deriva dal fatto che tra la lettera «l» e la lettera «n» di &lt;i&gt;localization&lt;/i&gt;  ci sono 10 lettere</A>
+</item>
+<item id="_80.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>>La ...localizzazione è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali.</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Localizzazione, l10n&lt;/font&gt;&lt;/b&gt;</A>
+</item>
+<item id="_81">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;Terminale, TTY&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>Al inizio dei tempi,l' unico modo di interazione con un elaboratore è stato l’uso della &lt;font color="red"&gt;telescrivente: teletype &lt;/font&gt;. Da teletype deriva la sigla TTY usata normalmente per identificare un terminale generico. La console è il terminale principale che fa parte dell’elaboratore stesso. Quando si parla di terminale si intende attualmente un insieme di due hardware:una tastiera e un video.
+
+ Quando si parla di un flusso di dati proveniente da un terminale, come nel caso dello standard input, si fa riferimento a quanto inserito tramite la tastiera. Quando si parla di un flusso di dati verso un terminale, come nel caso dello standard output, si fa riferimento a quanto viene emesso sullo schermo.
+</A>
+</item>
+<item id="_81.inv">
+ <cat>Linux: miniGlossario</cat>
+ <Q>>Quando si parla di ... si intende attualmente un insieme di due hardware:una tastiera e un video</Q>
+ <A>&lt;b&gt;&lt;font color="red"&gt;Terminale, TTY&lt;/font&gt;&lt;/b&gt;</A>
+</item>
 </mnemosyne>

@@ -135,7 +135,7 @@
 <item id="_11">
  <cat>Linux: ABC dei comandi</cat>
  <Q>$ mkdir ~/cloro &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
- <A>Crea la directory ‘cloro/’, come discendente della directory personale dell’utente attuale</A>
+ <A>Crea la directory ‘cloro/’, come discendente della directory personale (home directory) dell’utente attuale</A>
 </item>
 <item id="_11.inv">
  <cat>Linux: ABC dei comandi</cat>
@@ -150,14 +150,27 @@
  <Q>&lt;i&gt;Forma generale:&lt;/i&gt;
  
  &lt;b&gt;&lt;font color="red"&gt;cp&lt;/font&gt; [opzioni] origine ... destinazione&lt;/b&gt;</Q>
- <A>Copia uno o più file (incluse le directory) in un’unica destinazione
-  &lt;ul&gt;
-	 &lt;li&gt;Se "origine" e "destinazione" sono i nomi di due file normali(regular files), il primo viene copiato sul secondo, viene cioè generata una copia del file "origine" che ha il nome indicato come file "destinazione"&lt;/li&gt;
-	 &lt;li&gt;Se i file "origine" sono dei collegamenti simbolici per default  la copia è ottenuta a partire dai file originali(questi vengono copiati così come se fossero file normali) e non si ottiene quindi una copia dei collegamenti&lt;/li&gt;
-	 &lt;li&gt;Se "destinazione" è una directory, il file "origine" viene copiato nella directory con lo stesso nome&lt;/li&gt;
-	 &lt;li&gt;Se vengono indicati più file "origine"(quando p.e. si utilizzano i caratteri jolly), la "destinazione" &lt;b&gt;deve&lt;/b&gt; essere una directory, all’interno della quale vengono generate le copie di tutti i file "origine" indicati&lt;/li&gt;
-	 &lt;li&gt;Per default(senza le opzioni -r o -R) le directory non vengono copiate.&lt;/li&gt;	 
-  &lt;/ul&gt;</A>
+ <A>Copia uno o più file (incluse le directory) in un’unica destinazione. Per default(senza le opzioni -r o -R) le directory non vengono copiate</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>$ cp &lt;font color="red"&gt;file_origine file_destinazione&lt;/font&gt;  &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Se "origine" e "destinazione" sono i nomi di due file normali(regular files), il primo viene copiato sul secondo, viene cioè generata una copia del file "origine" che ha il nome indicato come file "destinazione"</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>$ cp &lt;font color="red"&gt;symlink_origine1 symlink_origine2 dir_destinazione&lt;/font&gt;  &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Se i file "origine" sono dei collegamenti simbolici per default  la copia è ottenuta a partire dai file originali(questi vengono copiati così come se fossero file normali) e non si ottiene quindi una copia dei collegamenti</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>$ cp &lt;font color="red"&gt;file_origine dir_destinazione&lt;/font&gt;  &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Se "destinazione" è una directory, il file "origine" viene copiato nella directory con lo stesso nome</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>$ cp &lt;font color="red"&gt;ls .???* dir_destinazione&lt;/font&gt;  &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Se vengono indicati più file "origine"(quando p.e. si utilizzano i caratteri jolly), la "destinazione" &lt;b&gt;deve&lt;/b&gt; essere una directory, all’interno della quale vengono generate le copie di tutti i file "origine" indicati</A>
 </item>
 <item id="_12.inv">
  <cat>Linux: ABC dei comandi</cat>
@@ -170,11 +183,11 @@
  <cat>Linux: ABC dei comandi</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;cp:&lt;/font&gt; Unix Vs Dos&lt;/b&gt;</Q>
  <A> 
-   &lt;ul&gt;
+   &lt;ol&gt;
 	 &lt;li&gt;In Unix i &lt;i&gt;caratteri jolly&lt;/i&gt; (ovvero il &lt;i&gt;file globbing&lt;/i&gt;) vengono risolti dalla shell prima dell’esecuzione del comando&lt;/li&gt;
 	 &lt;li&gt;i file system Unix possono utilizzare i collegamenti simbolici&lt;/li&gt;
-	 &lt;li&gt;In Dos il comando ‘COPY’ consente di copiare un gruppo di file in un altro gruppo di file con i nomi leggermente modificati, come per esempio: ‘COPY *.bak *.doc’. Con i sistemi Unix, questo non si puà fare&lt;/li&gt;
-   &lt;/ul&gt;
+	 &lt;li&gt;In Dos il comando ‘COPY’ consente di copiare un gruppo di file in un altro gruppo di file con i nomi leggermente modificati, come per esempio: ‘COPY *.bak *.doc’. Con i sistemi Unix, questo non si può fare&lt;/li&gt;
+   &lt;/ol&gt;
  </A>
 </item>
 <item id="_13">
@@ -207,13 +220,24 @@
  &lt;b&gt;&lt;font color="red"&gt;ln&lt;/font&gt; [opzioni] origine ... destinazione&lt;/b&gt;</Q>
  <A>Crea uno o più collegamenti di file (incluse le directory) in un’unica destinazione
  
- &lt;b&gt;NB:&lt;/b&gt; La creazione di un collegamento è un’azione simile a quella della copia. Quindi vale anche qui la differenza di comportamento che c’è tra Unix e Dos.
-  &lt;ul&gt;
-	 &lt;li&gt;Se vengono specificati solo i nomi di due file normali, il secondo diventa il collegamento del primo&lt;/li&gt;
-	 &lt;li&gt;Se il secondo nome indicato è una directory, al suo interno vengono creati altrettanti collegamenti quanti sono i file e le directory indicati come origine. I nomi utilizzati sono gli stessi di quelli di origine&lt;/li&gt;
-	 &lt;li&gt;Se vengono indicati più file, l’ultimo nome &lt;font color="red"&gt;deve&lt;/font&gt;  corrispondere a una directory&lt;/li&gt;
-	 &lt;li&gt;È ammissibile la creazione di collegamenti che fanno riferimento ad altri collegamenti&lt;/li&gt;
-  &lt;/ul&gt;</A>
+ &lt;b&gt;NB:&lt;/b&gt; La creazione di un collegamento è un’azione simile a quella della copia. Quindi vale anche qui la differenza di comportamento che c’è tra Unix e Dos</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>ln &lt;font color="red"&gt;f&lt;/font&gt; regularfile_ origine  regularfile_destinazione&lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Se vengono specificati solo i nomi di due file normali, il secondo diventa il collegamento del primo</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>ln &lt;font color="red"&gt;f&lt;/font&gt; symlink_ origine  destinazione&lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>È ammissibile la creazione di collegamenti che fanno riferimento ad altri collegamenti</A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>ln &lt;font color="red"&gt;f&lt;/font&gt; regularfile_ origine  dir_origine  dir_destinazione&lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Se il secondo nome indicato è una directory, al suo interno vengono creati altrettanti collegamenti quanti sono i file e le directory indicati come origine. I nomi utilizzati sono gli stessi di quelli di origine
+ 
+ Se vengono indicati più file, l’ultimo nome &lt;font color="red"&gt;deve&lt;/font&gt;  corrispondere a una directory</A>
 </item>
 <item id="_15.inv">
  <cat>Linux: ABC dei comandi</cat>
@@ -228,11 +252,16 @@
  
  Quale è per default il tipo di collegamento nei sitemi Unix?</Q>
  <A>
-  &lt;ul&gt;
+  &lt;ol&gt;
 	 &lt;li&gt;collegamenti fisici (hard links)&lt;/li&gt;
 	 &lt;li&gt;collegamenti simbolici (symliks o softliks)&lt;/li&gt;
-  &lt;/ul&gt;
-  Per default(in assenza di opzioni) Unix genera collegamenti fisici. Quando possibile preferiamo creare sempre dei &lt;i&gt;symlink&lt;/i&gt; che hanno meno limitazioni dei &lt;i&gt;hardlink&lt;/i&gt;</A>
+  &lt;/ol&gt;
+  </A>
+</item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>Quale è il tipo di link creato per default in Unix?</Q>
+ <A>Per default(in assenza di opzioni) Unix genera collegamenti fisici. Quando possibile preferiamo creare sempre dei &lt;i&gt;symlink&lt;/i&gt; che hanno meno limitazioni dei &lt;i&gt;hardlink&lt;/i&gt;</A>
 </item>
 <item id="_17">
  <cat>Linux: ABC dei comandi</cat>
@@ -299,7 +328,7 @@
 </item>
 <item id="_22.inv">
  <cat>Linux: ABC dei comandi</cat>
- <Q>Elimina il file ‘-r’ </Q>
+ <Q>Elimina il file ‘-r’ nella directory corrente </Q>
  <A>$ rm ./-r &lt;i&gt;[ Invio ]&lt;/i&gt;</A>
 </item>
 <item id="_23">
@@ -310,7 +339,7 @@
 <item id="_23.inv">
  <cat>Linux: ABC dei comandi</cat>
  <Q>Elimina la directory ‘varie/’ che risiede nella directory personale, insieme a tutte le sue eventuali sottodirectory</Q>
- <A>$ rm -r ~/varie &lt;i&gt;[ Invio ]&lt;/i&gt;</A>
+ <A>$ rm &lt;font color="red"&gt;-r&lt;/font&gt; ~/varie &lt;i&gt;[ Invio ]&lt;/i&gt;</A>
 </item>
 <item id="_24">
  <cat>Linux: ABC dei comandi</cat>
@@ -340,7 +369,7 @@
  <cat>Linux: ABC dei comandi</cat>
  <Q>&lt;font color="red"&gt;&lt;b&gt;ATTENZIONE!&lt;/b&gt;&lt;/font&gt;
  
- Elimina tutte i file le directory nascoste</Q>
+ Elimina tutti i file le directory nascoste</Q>
  <A>&lt;font color="red"&gt;# rm -r .??*&lt;/font&gt; [ Invio ]&lt;/i&gt;</A>
 </item>
 
@@ -351,12 +380,11 @@
  <Q>&lt;i&gt;Forma generale:&lt;/i&gt;
  
  &lt;b&gt;&lt;font color="red"&gt;mv&lt;/font&gt; [opzioni] origine ... destinazione&lt;/b&gt;</Q>
- <A>Sposta i file e le directory
-   &lt;ul&gt;
+ <A>Sposta i file e le directory. &lt;font color="red"&gt;Nel caso di spostamenti attraverso file system differenti, vengono spostati solo i cosiddetti &lt;i&gt;&lt;file normali--regular files--&lt;/i&gt;&lt; (quindi: niente collegamenti e niente directory)&lt;/font&gt;
+   &lt;ol&gt;
 	 &lt;li&gt;Se vengono specificati solo i nomi di due elementi (file o directory), il primo viene spostato e rinominato in modo da ottenere quanto indicato come destinazione&lt;/li&gt;
-	 &lt;li&gt;Se si indicano più elementi (file o directory), l’ultimo attributo deve essere una directory, all’interno della quale si spostano tutti gli elementi elencati&lt;/li&gt;
-	 &lt;li&gt;Nel caso di spostamenti attraverso file system differenti, vengono spostati solo i cosiddetti &lt;i&gt;&lt;file normali--regular files--&lt;/i&gt;&lt; (quindi: niente collegamenti e niente directory)&lt;/li&gt;
-   &lt;/ul&gt;</A>
+	 &lt;li&gt;Se si indicano più elementi (file o directory), l’ultimo attributo &lt;b&gt; deve &lt;/b&gt;  essere una directory, all’interno della quale si spostano tutti gli elementi elencati&lt;/li&gt;	 
+   &lt;/ol&gt;</A>
 </item>
 <item id="_26.inv">
  <cat>Linux: ABC dei comandi</cat>
@@ -378,11 +406,11 @@
 <item id="_28">
  <cat>Linux: ABC dei comandi</cat>
  <Q>$ mv * /tmp &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
- <A>sposta, all’interno di ‘/tmp/’, tutti i file e le directory che si trovano nella directory corrente</A>
+ <A>sposta, in ‘/tmp/’, tutti i file e le directory che si trovano nella directory corrente</A>
 </item>
 <item id="_28.inv">
  <cat>Linux: ABC dei comandi</cat>
- <Q>sposta, all’interno di ‘/tmp/’, tutti i file e le directory che si trovano nella directory corrente</Q>
+ <Q>sposta, in ‘/tmp/’, tutti i file e le directory che si trovano nella directory corrente</Q>
  <A>$ mv * /tmp &lt;i&gt;[ Invio ]&lt;/i&gt;</A>
 </item>
 
@@ -393,8 +421,7 @@
  <Q>&lt;i&gt;Forma generale:&lt;/i&gt;
  
  &lt;b&gt;&lt;font color="red"&gt;cat&lt;/font&gt; [opzioni] [file ...]&lt;/b&gt;</Q>
- <A>Concatena dei file e ne emette il contenuto attraverso lo &lt;i&gt;standard output&lt;/i&gt;.
- Il comando emette di seguito i file indicati come argomento attraverso lo standard output (schermo), in pratica qualcosa di simile al comando ‘TYPE’ del Dos. Se non viene fornito il nome di alcun file, viene utilizzato lo standard input.</A>
+ <A>Concatena dei file e ne emette il contenuto attraverso lo &lt;i&gt;standard output&lt;/i&gt;. Qualcosa di simile al comando ‘TYPE’ del Dos. &lt;font color="red"&gt;Se non viene fornito il nome di alcun file, viene utilizzato lo standard input&lt;/font&gt;.</A>
 </item>
 <item id="_29.inv">
  <cat>Linux: ABC dei comandi</cat>
@@ -442,11 +469,11 @@
 <item id="_33">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;bootstrap&lt;/font&gt;&lt;/b&gt;</Q>
- <A>La porzione di codice che si occupa effettivamente di attuare l’avvio è il &lt;i&gt;bootstrap&lt;/i&gt; (calzastivale). Pertanto, in senso figurato, il caricamento del sistema operativo viene paragonato all’atto di calzare uno stivale</A>
+ <A>La porzione di codice che si occupa effettivamente di attuare l’avvio è il &lt;i&gt;bootstrap&lt;/i&gt; (calzastivale)</A>
 </item>
 <item id="_33.inv">
  <cat>Linux: miniGlossario</cat>
- <Q>La porzione di codice che si occupa effettivamente di attuare l’avvio è il ... Pertanto, in senso figurato, il caricamento del sistema operativo viene paragonato all’atto di calzare uno stivale</Q>
+ <Q>La porzione di codice che si occupa effettivamente di attuare l’avvio è il ... In senso figurato, il caricamento del sistema operativo viene paragonato all’atto di calzare uno stivale</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;bootstrap&lt;/font&gt;&lt;/b&gt;</A>
 </item>
 <item id="_34">
@@ -492,7 +519,8 @@
 <item id="_38">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;GID, UID&lt;/font&gt;&lt;/b&gt;</Q>
- <A>&lt;i&gt;Group identifier, Group ID&lt;/i&gt; o numero identificativo del gruppo di utenti. Invece UID User identifier è il numero identificativo dell’utente</A>
+ <A>&lt;i&gt;Group identifier, Group ID&lt;/i&gt; è il numero identificativo del gruppo di utenti. 
+ &lt;i&gt;UID, User identifier&lt;/i&gt; è il numero identificativo dell’utente</A>
 </item>
 <item id="_38.inv">
  <cat>Linux: miniGlossario</cat>
@@ -504,15 +532,15 @@
  <Q>&lt;b&gt;&lt;font color="red"&gt;Login(procedura di accesso), logout&lt;/font&gt;&lt;/b&gt;</Q>
  <A>
    &lt;ol&gt;
-	 &lt;li&gt;Con &lt;i&gt;procedura di accesso(login)&lt;/i&gt; si riferisce al procedimento attraverso il quale un utente accede e può interagire con il sistema, dopo una fase di identificazione, che di solito consiste nell’indicazione di un &lt;i&gt;nominativo-utente(username)&lt;/i&gt; e di una &lt;i&gt;parola d’ordine(password)&lt;/i&gt;.In particolare login identifica l’ingresso dell’utente, nel sistema&lt;/li&gt;
+	 &lt;li&gt;Con &lt;i&gt;login&lt;/i&gt; è il procedimento attraverso il quale un utente accede(ingresso dell’utente) nel sistema e può interagire con il sistema, dopo una fase di identificazione, che di solito consiste nell’indicazione di un &lt;i&gt;nominativo-utente(username)&lt;/i&gt; e di una &lt;i&gt;parola d’ordine(password)&lt;/i&gt;.&lt;/li&gt;
 	 &lt;li&gt;Il &lt;i&gt;logout&lt;/i&gt; identifica la conclusione dell’attività dell' utente nel sistema.&lt;/li&gt;
    &lt;/ol&gt;</A>
 </item>
 <item id="_39.inv">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;ol&gt;
-	 &lt;li&gt;Con ... si riferisce al procedimento attraverso il quale un utente accede e può interagire con il sistema, dopo una fase di identificazione, che di solito consiste nell’indicazione di un &lt;i&gt;nominativo-utente(username)&lt;/i&gt; e di una &lt;i&gt;parola d’ordine(password)&lt;/i&gt;.In particolare login identifica l’ingresso dell’utente, nel sistema&lt;/li&gt;
-	 &lt;li&gt;Il ... identifica la conclusione dell’attività dell' utente nel sistema.&lt;/li&gt;
+	 &lt;li&gt;Con ... si riferisce al procedimento attraverso il quale un utente accede(ingresso dell’utente) e può interagire con il sistema, dopo una fase di identificazione, che di solito consiste nell’indicazione di un &lt;i&gt;nominativo-utente(username)&lt;/i&gt; e di una &lt;i&gt;parola d’ordine(password)&lt;/i&gt;.&lt;/li&gt;
+	 &lt;/i&gt;.Il ... identifica la conclusione dell’attività dell' utente nel sistema.&lt;/li&gt;
    &lt;/ol&gt;</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Login(procedura di accesso), logout&lt;/font&gt;&lt;/b&gt;</A>
 </item>          
@@ -531,7 +559,7 @@
 <item id="_41">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Second-extended, Ext2, Ext3, Ext4&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il file system nativo del sistema GNU/Linux è il tipo Second-extended, il quale prevede delle varianti: Ext2, Ext3 e Ext4. Le varianti Ext3 e Ext4 contengono delle estensioni che consentono di ridurre la possibilità di perdite di dati, mantenendo la compatibilità con Ext2; Eccetto Ext4 che è solo parzialmente compatibile</A>
+ <A>Il file system nativo del sistema GNU/Linux è il tipo &lt;i&gt;Second-extended&lt;/i&gt;, il quale prevede delle varianti: &lt;i&gt;Ext2, Ext3 e Ext4&lt;/i&gt;. Le varianti Ext3 e Ext4 contengono delle estensioni che consentono di ridurre la possibilità di perdite di dati, mantenendo la compatibilità con Ext2; Eccetto Ext4 che è solo parzialmente compatibile</A>
 </item>
 <item id="_41.inv">
  <cat>Linux: miniGlossario</cat>
@@ -563,29 +591,17 @@
 <item id="_44">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale
- 
- &lt;b&gt;NB:&lt;/b&gt; Nei sistemi operativi Unix, quando si vuole accedere ai dati memorizzati su disco, non si può fare riferimento a un file appartenente a una certa unità disco(C:/ ,D:/ ecc.)come avviene nei sistemi Dos e derivati. Si deve sempre fare riferimento al file system globale("/")</A>
+ <A>Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale</A>
+</item>
+<item id="">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;u&gt;FS: Unix Vs Dos&lt;/b&gt;&lt;/u&gt;</Q>
+ <A>Nei sistemi operativi Unix, quando si vuole accedere ai dati memorizzati su disco, non si può fare riferimento a un file appartenente a una certa unità disco(C:/ ,D:/ ecc.)come avviene nei sistemi Dos e derivati. Si deve sempre fare riferimento al file system globale("/")</A>
 </item>
 <item id="_44.inv">
  <cat>Linux: miniGlossario</cat>
  <Q>Il termine ... indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine ... indica il distacco di un disco dalla struttura globale</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;</A>
-</item>
-<item id="_45">
- <cat>Linux: miniGlossario</cat>
- <Q>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale
- 
- &lt;b&gt;NB:&lt;/b&gt; Nei sistemi operativi Unix, quando si vuole accedere ai dati memorizzati su disco, non si può fare riferimento a un file appartenente a una certa unità disco(C:/ ,D:/ ecc.)come avviene nei sistemi Dos e derivati. Si deve sempre fare riferimento al file system globale("/").
- </A>
-</item>
-<item id="_45.inv">
- <cat>Linux: miniGlossario</cat>
- <Q>Il termine ... indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine ... indica il distacco di un disco dalla struttura globale</Q>
- <A>&lt;b&gt;&lt;font color="red"&gt;Mount, unmount&lt;/font&gt;&lt;/b&gt;
- 
- Il termine &lt;i&gt;mount&lt;/i&gt; indica un collegamento, o l’innesto, del contenuto di un disco nel &lt;font color="red"&gt;file system globale(root "/")&lt;/font&gt;; il termine &lt;i&gt;unmount&lt;/i&gt; indica il distacco di un disco dalla struttura globale</A>
 </item>
 <item id="_46">
  <cat>Linux: miniGlossario</cat>
@@ -597,6 +613,16 @@
 	 &lt;li&gt;raramente una stampante del genere può essere configurata per andare a capo con il solo codice "LF", è possibile utilizzare un filtro che trasformi il carattere "LF" in "CR""LF". Spesso, per un programma che svolge un compito come questo si usa il nome ‘unix2dos’.&lt;/li&gt;
    &lt;ul&gt;
  </A>
+</item>
+<item id="">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;u&gt;Newline: Unix Vs Dos&lt;/u&gt;&lt;/b&gt;</Q>
+ <A>
+  &lt;ol&gt;
+	 &lt;li&gt;I sistemi Unix più comuni utilizzano il codice "LF" &lt;/li&gt;
+	 &lt;li&gt;Nei sistemi Dos e discendenti si utilizza invece la coppia "CR""LF", per cui, se si tenta di stampare un testo fatto per i sistemi Unix utilizzando una stampante configurata per operare con il sistema operativo Dos, come risultato si possono ottenere una serie di righe scalettate&lt;/li&gt;
+	 &lt;li&gt;raramente una stampante del genere può essere configurata per andare a capo con il solo codice "LF", è possibile utilizzare un filtro che trasformi il carattere "LF" in "CR""LF". Spesso, per un programma che svolge un compito come questo si usa il nome ‘unix2dos’.&lt;/li&gt;
+  &lt;ol&gt;</A>
 </item>
 <item id="_46.inv">
  <cat>Linux: miniGlossario</cat>
@@ -626,7 +652,7 @@
 <item id="_49">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Client (Cliente)&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Un «cliente» è generalmente un programma che usufruisce di un servizio offerto da un «servente». Tuttavia, spesso si usa questo termine, in modo informale, anche per identificare un nodo di rete che, nell’ambito di un certo contesto, dipende da servizi offerti dall’esterno</A>
+ <A>Un «cliente» è generalmente un programma che usufruisce di un servizio offerto da un «servente». Si usa informalmente, anche per identificare un nodo di rete che, nell’ambito di un certo contesto, dipende da servizi offerti dall’esterno</A>
 </item>
 <item id="_49.inv">
  <cat>Linux: miniGlossario</cat>
@@ -636,25 +662,23 @@
 <item id="_50">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Dominio, nome di dominio, nome a dominio, Domain name&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Col termine «dominio» (Nella terminologia giuridica italiana si usa la definizione «nome a dominio») si riferisce al nome che ha un certo nodo di rete in una rete Internet. 
- 
- Questo nome &lt;u&gt;è composto da vari elementi che servono a rappresentare una gerarchia di domini&lt;/u&gt;, in modo simile a ciò che si fa nei file system con la struttura delle directory. 
- 
+ <A>«dominio» (Nella terminologia giuridica italiana si usa la definizione «nome a dominio»)è il nome(&lt;u&gt;è composto da vari elementi che servono a rappresentare una gerarchia di domini&lt;/u&gt;, similarmente a ciò che si fa nei file system con la struttura delle directory) che ha un certo nodo di rete in una rete Internet. 
+  
  Un «nome di dominio» può rappresentare una posizione intermedia di questa gerarchia, oppure anche il nome completo di un nodo di rete</A>
 </item>
 <item id="_50.inv">
  <cat>Linux: miniGlossario</cat>
- <Q>Col termine ... (Nella terminologia giuridica italiana si usa la definizione ...) si riferisce al nome che ha un certo nodo di rete in una rete Internet. </Q>
+ <Q>...(Nella terminologia giuridica italiana si usa la definizione «nome a dominio»)è il nome che ha un certo nodo di rete in una rete Internet.</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Dominio, nome di dominio, nome a dominio, Domain name&lt;/font&gt;&lt;/b&gt;</A>
 </item>
 <item id="_51">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Host&lt;/font&gt;&lt;/b&gt;</Q>
- <A>&lt;i&gt;Host&lt;/i&gt; è l’oste, ovvero, colui che ospita. Il termine host viene usato nell’ambito delle connessioni in rete per definire i nodi di rete, intesi come elaboratori, che svolgono e ospitano qualche tipo di servizio</A>
+ <A>&lt;i&gt;Host&lt;/i&gt; è l’oste, ovvero, colui che ospita qualche tipo di servizio. Nell’ambito delle connessioni in rete è sinonimo di nodo di rete, inteso come elaboratore.</A>
 </item>
 <item id="_51.inv">
  <cat>Linux: miniGlossario</cat>
- <Q>il termine ... viene usato nell’ambito delle connessioni in rete per definire i nodi di rete, intesi come elaboratori, che svolgono e ospitano qualche tipo di servizio.</Q>
+ <Q>... è l’oste, ovvero, colui che ospita qualche tipo di servizio. Nell’ambito delle connessioni in rete per è sinonimo di nodo di rete, inteso come elaboratore.</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Host&lt;/font&gt;&lt;/b&gt;</A>
 </item>
 <item id="_52">
@@ -680,7 +704,7 @@
 <item id="_54">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Proxy&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il termine proxy viene usato in informatica in varie circostanze per identificare un servizio che si comporta in qualche modo come un procuratore, o un procacciatore di qualcosa</A>
+ <A>Il termine proxy in informatica identifica un servizio che si comporta in qualche modo come un procuratore, o un procacciatore di qualcosa</A>
 </item>
 <item id="_54.inv">
  <cat>Linux: miniGlossario</cat>
@@ -690,7 +714,9 @@
 <item id="_55">
  <cat>Linux: miniGlossario</cat>
  <Q>Esempio di &lt;b&gt;&lt;font color="red"&gt; Proxy&lt;/font&gt;&lt;/b&gt;</Q>
- <A> Il servente che si inserisce tra una rete locale e una rete esterna, allo scopo di eseguire gli accessi verso la rete esterna per conto dei nodi della rete locale, senza che questi possano avere alcun contatto diretto con l’esterno. Di solito, questo tipo di proxy incorpora una memoria cache per ridurre gli accessi ripetuti alle stesse risorse esterne</A>
+ <A> Il servente che si inserisce tra una LAN e una rete esterna, per eseguire gli accessi verso la rete esterna per conto dei nodi della rete locale, senza che questi possano avere alcun contatto diretto con l’esterno. 
+ 
+ Di solito, questo tipo di proxy incorpora una memoria cache per ridurre gli accessi ripetuti alle stesse risorse esterne</A>
 </item>
 <item id="_56">
  <cat>Linux: miniGlossario</cat>
@@ -705,7 +731,7 @@
 <item id="_57">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;URI, URL, URN&lt;/font&gt;&lt;/b&gt;</Q>
- <A>&lt;font color="red"&gt;Uniform resource locator, Uniform resource identifier&lt;/font&gt;. È il modo con cui si definisce un indirizzo che identifica precisamente una risorsa di rete (come una pagina HTML, un file in un servizio FTP ecc). Le due definizioni hanno estensioni differenti; in particolare, URI include URL e URN</A>
+ <A>&lt;font color="red"&gt;Uniform resource locator, Uniform resource identifier&lt;/font&gt;. È il modo con cui si definisce un indirizzo che identifica precisamente una risorsa di rete (come una pagina HTML, un file in un servizio FTP ecc). URI e URL hanno estensioni differenti; in particolare, URI include URL e URN</A>
 </item>
 <item id="_57.inv">
  <cat>Linux: miniGlossario</cat>
@@ -717,7 +743,7 @@
  <Q>&lt;b&gt;&lt;font color="red"&gt;Init, procedura di inizializzazione del sistema&lt;/font&gt;&lt;/b&gt;</Q>
  <A>Init è il primo processo(programma in esecuzione) che viene avviato dal kernel allo scopo di avviare il sistema. 
  
- Init si avvale di una serie di script per avviare dei programmi che rimangono sullo sfondo(in background). Tutto l’insieme viene indicato come procedura di inizializzazione del sistema, &lt;u&gt;includendo sia l’avvio, sia l’arresto&lt;/u&gt;, distinguendo anche diversi livelli di esecuzione</A>
+ Init si avvale di una serie di script per avviare dei programmi che rimangono sullo sfondo(in background). Tutto l’insieme viene indicato come procedura di inizializzazione del sistema, &lt;u&gt;includendo sia l’avvio, sia l’arresto&lt;/u&gt;, distinguendo anche diversi &lt;font color="red"&gt;livelli di esecuzione(run levels)&lt;/font&gt;</A>
 </item>
 <item id="_58.inv">
  <cat>Linux: miniGlossario</cat>
@@ -771,8 +797,13 @@
 <item id="_63">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Run level, livello di esecuzione&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Quando si adotta una procedura di inizializzazione del sistema in stile &lt;i&gt;System V&lt;/i&gt;, che è poi quella normale, si distinguono diversi &lt;font color="red"&gt;livelli di esecuzione&lt;/font&gt;, in modo da poter definire quali parti del sistema devono essere attivate e quali no, a seconda delle esigenze. Il livello di esecuzione è un numero non negativo che parte da zero, il cui significato dipende dal modo in cui il sistema è configurato.
+ <A>E' un numero non negativo che parte da zero, il cui significato dipende dal modo in cui il sistema è configurato. Nella procedura di inizializzazione del sistema in stile &lt;i&gt;System V&lt;/i&gt;, che è poi quella normale, si distinguono diversi &lt;font color="red"&gt;livelli di esecuzione&lt;/font&gt;
 </A>
+</item>
+<item id="">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;funzione dei System V Run levels(livelli di esecuzione)&lt;/font&gt;&lt;/b&gt;</Q>
+ <A>definiscono quali parti del sistema devono essere attivate e quali no, a seconda delle esigenze</A>
 </item>
 <item id="_63.inv">
  <cat>Linux: miniGlossario</cat>
@@ -797,7 +828,7 @@
 <item id="_67">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;script&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Uno script è un file di comandi che costituisce in pratica un programma interpretato. Normalmente, l’interprete di uno script è anche una shell</A>
+ <A>E' un file di comandi che costituisce in pratica un programma interpretato. Normalmente, l’interprete di uno script è anche una shell</A>
 </item>
 <item id="_67.inv">
  <cat>Linux: miniGlossario</cat>
@@ -817,7 +848,9 @@
 <item id="_69">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Standard error&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il file o il dispositivo predefinito per l’emissione dei dati relativi a segnalazioni di errore.Di solito si tratta del video della console o del terminale da cui si opera. Di norma, può essere ridiretto utilizzando il simbolo ‘2>’ seguito dal nome del file o del dispositivo da utilizzare.</A>
+ <A>E' il file o il dispositivo predefinito per l’emissione dei dati relativi a segnalazioni di errore.Di solito si tratta del video della console o del terminale da cui si opera. 
+ 
+ Di norma, può essere ridiretto utilizzando il simbolo &lt;font color="red"&gt;‘2>’&lt;/font&gt; seguito dal nome del file o del dispositivo da utilizzare.</A>
 </item>
 <item id="_69.inv">
  <cat>Linux: miniGlossario</cat>
@@ -827,7 +860,7 @@
 <item id="_70">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Standard input&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il file o il dispositivo predefinito per l’inserimento dei dati, è lo standard input. Di solito è la tastiera della console o del terminale da cui si opera. Per terminare l’inserimento occorre fornire il carattere di fine file ("EOF" cioè ^d) che di solito si ottiene con la combinazione [ Ctrl d ]. 
+ <A>Il file o il dispositivo predefinito per l’inserimento dei dati, è lo standard input. Di solito è la tastiera della console o del terminale da cui si opera. Per terminare l’inserimento occorre fornire il carattere di fine file ("EOF" cioè ^d o [ Ctrl d ]). 
  
  Lo standard input, di norma, può essere ridiretto con il simbolo minore (&lt;) seguito dal nome del file o del dispositivo da utilizzare, oppure con la barra verticale (‘|’ pipe) quando si vuole utilizzare l’output di un comando come input per il comando successivo</A>
 </item>
@@ -913,7 +946,7 @@
 </item>
 <item id="_77.inv">
  <cat>Linux: miniGlossario</cat>
- <Q>>... è un modello per la ricerca di stringhe. Viene usata da diversi programmi di servizio</Q>
+ <Q>... è un modello per la ricerca di stringhe. Viene usata da diversi programmi di servizio</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Espressione regolare, regular expression, regexp&lt;/font&gt;&lt;/b&gt;</A>
 </item>
 <item id="_78">
@@ -924,13 +957,15 @@
 </item>
 <item id="_78.inv">
  <cat>Linux: miniGlossario</cat>
- <Q>>... rappresenta il modo con cui una caratteristica progettuale particolare viene definita in pratica in un sistema determinato.</Q>
+ <Q>... rappresenta il modo con cui una caratteristica progettuale particolare viene definita in pratica in un sistema determinato.</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Implementation (realizzazione)&lt;/font&gt;&lt;/b&gt;</A>
 </item>
 <item id="_79">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Internazionalizzazione, i18n&lt;/font&gt;&lt;/b&gt;</Q>
- <A>L’internazionalizzazione è l’azione con cui si realizza o si modifica un programma, in modo che sia sensibile alla «localizzazione». La sigla deriva dal fatto che tra la lettera «i» e la lettera «n» di internationalization ci sono 18 lettere</A>
+ <A>L’internazionalizzazione è l’azione con cui si realizza o si modifica un programma, in modo che sia sensibile alla «localizzazione». 
+ 
+ La sigla deriva dal fatto che tra la lettera «i» e la lettera «n» di internationalization ci sono 18 lettere</A>
 </item>
 <item id="_79.inv">
  <cat>Linux: miniGlossario</cat>
@@ -940,20 +975,22 @@
 <item id="_80">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Localizzazione, l10n&lt;/font&gt;&lt;/b&gt;</Q>
- <A>La localizzazione è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali. La sigla deriva dal fatto che tra la lettera «l» e la lettera «n» di &lt;i&gt;localization&lt;/i&gt;  ci sono 10 lettere</A>
+ <A>La localizzazione è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali. 
+ 
+ La sigla deriva dal fatto che tra la lettera «l» e la lettera «n» di &lt;i&gt;localization&lt;/i&gt;  ci sono 10 lettere</A>
 </item>
 <item id="_80.inv">
  <cat>Linux: miniGlossario</cat>
- <Q>>La ...localizzazione è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali.</Q>
+ <Q>La ... è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali.</Q>
  <A>&lt;b&gt;&lt;font color="red"&gt;Localizzazione, l10n&lt;/font&gt;&lt;/b&gt;</A>
 </item>
 <item id="_81">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Terminale, TTY&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Al inizio dei tempi,l' unico modo di interazione con un elaboratore è stato l’uso della &lt;font color="red"&gt;telescrivente: teletype &lt;/font&gt;. Da teletype deriva la sigla TTY usata normalmente per identificare un terminale generico. La console è il terminale principale che fa parte dell’elaboratore stesso. Quando si parla di terminale si intende attualmente un insieme di due hardware:una tastiera e un video.
+ <A>I primo mezzo di interazione iuomo-elaboratore è stato l’uso della &lt;font color="red"&gt;telescrivente: teletype (TTY) &lt;/font&gt;. TTY  normalmente identifica un terminale generico. Quando si parla di terminale si intende attualmente un insieme di due hardware:una tastiera e un video. La console è il terminale principale che fa parte dell’elaboratore stesso
 
- Quando si parla di un flusso di dati proveniente da un terminale, come nel caso dello standard input, si fa riferimento a quanto inserito tramite la tastiera. Quando si parla di un flusso di dati verso un terminale, come nel caso dello standard output, si fa riferimento a quanto viene emesso sullo schermo.
-</A>
+ flusso di dati proveniente da un terminale (caso dello standard input): si fa riferimento a quanto inserito tramite la tastiera. 
+ flusso di dati verso un terminale (caso dello standard output): si fa riferimento a quanto viene emesso sullo schermo</A>
 </item>
 <item id="_81.inv">
  <cat>Linux: miniGlossario</cat>

@@ -78,13 +78,13 @@
 </item>
 <item id="_6">
  <cat>Linux: ABC dei comandi</cat>
- <Q>$ cd &lt;font color="red"&gt; ~&lt;/font&gt; &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
- <A>Cambia la directory corrente, spostandosi nella propria &lt;font color="red"&gt;directory personale (home directory)&lt;/font&gt; dell’utente</A>
+ <Q>$ &lt;font color="red"&gt;cd&lt;/font&gt; o cd &lt;font color="red"&gt; ~&lt;/font&gt; &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>Cambia la directory corrente, spostandosi nella propria home &lt;font color="red"&gt;directory personale (home directory)&lt;/font&gt; dell’utente</A>
 </item>
 <item id="_6.inv">
  <cat>Linux: ABC dei comandi</cat>
  <Q>Cambia la directory corrente, spostandosi nella propria &lt;font color="red"&gt;directory personale (home directory)&lt;/font&gt; dell’utente</Q>
- <A>$ cd &lt;font color="red"&gt; ~&lt;/font&gt; &lt;i&gt;[ Invio ]&lt;/i&gt;</A> 
+ <A>$ &lt;font color="red"&gt;cd&lt;/font&gt; o cd &lt;font color="red"&gt; ~&lt;/font&gt; &lt;i&gt;[ Invio ]&lt;/i&gt;</A> 
 </item>
 <item id="_7">
  <cat>Linux: ABC dei comandi</cat>
@@ -96,6 +96,17 @@
  <Q>Cambia la directory corrente, spostandosi nella directory personale dell’utente ‘daniele’</Q>
  <A>$ cd ~daniele &lt;i&gt;[ Invio ]&lt;/i&gt;</A> 
 </item>
+<item id="">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>$ cd &lt;font color="red"&gt;-&lt;/font&gt; &lt;i&gt;[ Invio ]&lt;/i&gt;</Q>
+ <A>si sposta nella directory precedente</A>
+</item>
+<item id=".inv">
+ <cat>Linux: ABC dei comandi</cat>
+ <Q>si sposta nella directory precedente</Q>
+ <A>$ cd &lt;font color="red"&gt;-&lt;/font&gt; &lt;i&gt;[ Invio ]&lt;/i&gt;</A>
+</item>
+
 
 &lt;! mkdir &gt;
 <item id="_8">
@@ -952,7 +963,7 @@
 <item id="_78">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Implementation (realizzazione)&lt;/font&gt;&lt;/b&gt;</Q>
- <A>Il verbo inglese "to implement" rappresenta il modo con cui una caratteristica progettuale particolare viene definita in pratica in un sistema determinato. In altre parole, si tratta della soluzione pratica adottata per assolvere a una funzione determinata, soprattutto quando le indicazioni originarie per raggiungere il risultato sono incomplete. In forma ancora più stringata, si tratta della realizzazione di qualcosa in un contesto determinato.
+ <A>"to implement": si tratta della soluzione pratica adottata per assolvere a una determinata funzione, soprattutto quando le indicazioni originarie per raggiungere il risultato sono incomplete. In altre parole, si tratta della realizzazione di qualcosa in un contesto determinato.
 </A>
 </item>
 <item id="_78.inv">
@@ -965,7 +976,7 @@
  <Q>&lt;b&gt;&lt;font color="red"&gt;Internazionalizzazione, i18n&lt;/font&gt;&lt;/b&gt;</Q>
  <A>L’internazionalizzazione è l’azione con cui si realizza o si modifica un programma, in modo che sia sensibile alla «localizzazione». 
  
- La sigla deriva dal fatto che tra la lettera «i» e la lettera «n» di internationalization ci sono 18 lettere</A>
+ La sigla deriva dal fatto che tra la lettera «i» e la lettera «n» di &lt;i&gt;internationalization&lt;/i&gt; ci sono 18 lettere</A>
 </item>
 <item id="_79.inv">
  <cat>Linux: miniGlossario</cat>
@@ -975,7 +986,7 @@
 <item id="_80">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Localizzazione, l10n&lt;/font&gt;&lt;/b&gt;</Q>
- <A>La localizzazione è la configurazione attraverso la quale si fa in modo che un programma determinato si adatti alle particolarità linguistico-nazionali locali. 
+ <A>La &lt;i&gt; localizzazione&lt;/i&gt; è la configurazione (per adattarsi alle particolarità linguistico-nazionali locali) di un programma 
  
  La sigla deriva dal fatto che tra la lettera «l» e la lettera «n» di &lt;i&gt;localization&lt;/i&gt;  ci sono 10 lettere</A>
 </item>
@@ -987,10 +998,18 @@
 <item id="_81">
  <cat>Linux: miniGlossario</cat>
  <Q>&lt;b&gt;&lt;font color="red"&gt;Terminale, TTY&lt;/font&gt;&lt;/b&gt;</Q>
- <A>I primo mezzo di interazione iuomo-elaboratore è stato l’uso della &lt;font color="red"&gt;telescrivente: teletype (TTY) &lt;/font&gt;. TTY  normalmente identifica un terminale generico. Quando si parla di terminale si intende attualmente un insieme di due hardware:una tastiera e un video. La console è il terminale principale che fa parte dell’elaboratore stesso
+ <A>I primo mezzo di interazione uomo-elaboratore è stato l’uso della &lt;font color="red"&gt;telescrivente: teletype (TTY) &lt;/font&gt;. TTY  normalmente identifica un terminale generico (attualmente un insieme di due hardware:una tastiera e un video).
 
  flusso di dati proveniente da un terminale (caso dello standard input): si fa riferimento a quanto inserito tramite la tastiera. 
  flusso di dati verso un terminale (caso dello standard output): si fa riferimento a quanto viene emesso sullo schermo</A>
+</item>
+<item id="">
+ <cat>Linux: miniGlossario</cat>
+ <Q>&lt;b&gt;&lt;font color="red"&gt;console&lt;/font&gt;&lt;/b&gt;</Q>
+ <A> La console è il terminale principale che fa parte dell’elaboratore stesso
+
+ flusso di dati proveniente da un terminale (caso dello standard input): quanto inserito tramite la tastiera. 
+ flusso di dati verso un terminale (caso dello standard output): quanto viene emesso sullo schermo</A>
 </item>
 <item id="_81.inv">
  <cat>Linux: miniGlossario</cat>
